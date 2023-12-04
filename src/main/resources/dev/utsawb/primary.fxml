@@ -269,14 +269,30 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
+            <Button fx:id="load" alignment="CENTER" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" style="-fx-background-color: &quot;FBFEF9&quot;;" text="Load" textOverrun="CLIP">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="load" mnemonicParsing="false" style="-fx-background-color: &quot;FBFEF9&quot;;" text="Load" />
-                  <Button fx:id="reset" mnemonicParsing="false" style="-fx-background-color: &quot;FBFEF9&quot;;" text="Reset" />
-                  <Button fx:id="save" mnemonicParsing="false" style="-fx-background-color: &quot;FBFEF9&quot;;" text="Save" />
+                  <Button fx:id="reset" alignment="CENTER" contentDisplay="CENTER" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" style="-fx-background-color: &quot;FBFEF9&quot;;" text="Reset" textOverrun="CLIP">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
                </children>
             </HBox>
+            <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" minHeight="50.0" minWidth="200.0" mnemonicParsing="false" style="-fx-background-color: &quot;FBFEF9&quot;;" text="Save" textOverrun="CLIP">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
          </children>
       </HBox>
+      <Button fx:id="aiType" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" style="-fx-background-color: &quot;FBFEF9&quot;;" text="Smart AI">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
    </children>
 </VBox>

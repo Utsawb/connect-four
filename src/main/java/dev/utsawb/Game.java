@@ -8,7 +8,7 @@ public class Game {
     private char colorPlayer;
     private char colorAI;
 
-    private char move_count;
+    private char moveCount;
 
     public static Random r;
 
@@ -25,9 +25,15 @@ public class Game {
                 board.setTile(row, col, '0');
             }
         }
+        moveCount = 0;
     }
 
-    public char game_finish() {
+    public char gameFinish() {
+        if (moveCount == (board.getRows() * board.getCols())) {
+            return 'D';
+        }
+
+
         for (int col = 0; col < board.getCols(); ++col) {
             for (int row = 0; row <= board.getRows() - 4; ++row) {
                 char currentChar = board.getTile(row, col);
@@ -98,73 +104,86 @@ public class Game {
         }
 
         board.setTile(dropRow(col), col, colorPlayer);
-        ++move_count;
+        ++moveCount;
         return true;
     }
 
-    public void aiInput() {
-        int bestScore = 1 << 31;
-        int bestCol = -1;
+    public void aiInput(char type) {
+        if (type == 'S') {
+            int bestScore = 1 << 31;
+            int bestCol = -1;
 
-        for (int col = 0; col < board.getCols(); col++) {
-            if (isValid(col)) {
-                int row = dropRow(col);
-                board.setTile(row, col, colorAI);
-                int score = minimax(0, false);
-                board.setTile(row, col, '0');
-
-                if (score > bestScore) {
-                    bestScore = score;
-                    bestCol = col;
-                }
-            }
-        }
-
-        board.setTile(dropRow(bestCol), bestCol, colorAI);
-        ++move_count;
-    }
-
-    private int evaluateScore(char winner) {
-        if (winner == colorAI) {
-            return 100;
-        } else if (winner == colorPlayer) {
-            return -100;
-        } else {
-            return 0;
-        }
-    }
-
-    private int minimax(int depth, boolean isMaximizingPlayer) {
-        char winner = game_finish();
-        if (winner != '0') {
-            return winner == colorAI ? 100 : -100;
-        }
-
-        if (depth == 6) {
-            return 0;
-        }
-
-        if (isMaximizingPlayer) {
-            int bestScore = Integer.MIN_VALUE;
             for (int col = 0; col < board.getCols(); col++) {
                 if (isValid(col)) {
                     int row = dropRow(col);
                     board.setTile(row, col, colorAI);
-                    int score = minimax(depth + 1, false);
+                    int score = minimax(10, 1 << 31, 1 << 31 - 1, false);
                     board.setTile(row, col, '0');
-                    bestScore = Math.max(score, bestScore);
+
+                    if (score > bestScore) {
+                        bestScore = score;
+                        bestCol = col;
+                    }
+                }
+            }
+
+            board.setTile(dropRow(bestCol), bestCol, colorAI);
+            ++moveCount;
+        } else if (type == 'R') {
+            Random random = new Random();
+            int col;
+        
+            do {
+                col = random.nextInt(board.getCols());
+            } while (!isValid(col));
+        
+            board.setTile(dropRow(col), col, colorAI);
+            ++moveCount;
+        }
+
+    }
+
+    // https://www.youtube.com/watch?v=l-hh51ncgDI
+    // This video saved me
+    private int minimax(int depth, int alpha, int beta, boolean isMaximizingPlayer) {
+        char winner = gameFinish();
+        if (winner != '0') {
+            return winner == colorAI ? 100 : -100;
+        }
+
+        if (depth == 0) {
+            return 0;
+        }
+
+        if (isMaximizingPlayer) {
+            int bestScore = 1 << 31;
+            for (int col = 0; col < board.getCols(); col++) {
+                if (isValid(col)) {
+                    int row = dropRow(col);
+                    board.setTile(row, col, colorAI);
+                    int score = minimax(depth - 1, alpha, beta, false);
+                    alpha = score > alpha ? score : alpha;
+                    board.setTile(row, col, '0');
+                    bestScore = bestScore > score ? bestScore : score;
+                    if (beta <= alpha) {
+                        break;
+                    }
                 }
             }
             return bestScore;
         } else {
-            int bestScore = Integer.MAX_VALUE;
+            int bestScore = 1 << 31 - 1;
             for (int col = 0; col < board.getCols(); col++) {
                 if (isValid(col)) {
                     int row = dropRow(col);
                     board.setTile(row, col, colorPlayer);
-                    int score = minimax(depth + 1, true);
+                    int score = minimax(depth - 1, alpha, beta, true);
+                    beta = score < beta ? score : beta;
                     board.setTile(row, col, '0');
-                    bestScore = Math.min(score, bestScore);
+                    bestScore = bestScore < score ? bestScore : score;
+                    if (beta <= alpha) {
+                        break;
+                    }
                 }
             }
             return bestScore;

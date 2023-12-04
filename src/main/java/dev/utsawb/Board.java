@@ -6,30 +6,26 @@ public class Board {
     private int rows;
     private int cols;
 
-    private ArrayList<Character> board;
+    private ArrayList<ArrayList<Character>> board;
 
     Board(int rows, int cols) {
         this.rows = rows;
         this.cols = cols;
-        board = new ArrayList<Character>(rows * cols);
-        for (int i = 0; i < rows * cols; ++i) {
-            board.add('0');
+        board = new ArrayList<ArrayList<Character>>();
+        for (int r = 0; r < rows; ++r) {
+            board.add(new ArrayList<Character>());
+            for (int c = 0; c < cols; ++c) {
+                board.get(r).add('0');
+            }
         }
     }
 
     public char getTile(int row, int col) {
-        return board.get(col + row * cols);
-    }
-    public char getTile(int i) {
-        return board.get(i);
+        return board.get(row).get(col);
     }
     public void setTile(int row, int col, char value) {
-        board.set(col + row * cols, value);
+        board.get(row).set(col, value);
     }
-    public void setTile(int i, char value) {
-        board.set(i, value);
-    }
-
     public int getRows() {
         return rows;
     }
