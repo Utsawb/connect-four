@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: &quot;191923&quot;;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.utsawb.PrimaryController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="title" contentDisplay="CENTER" text="Connect Four" textAlignment="CENTER" textFill="#fbfef9" textOverrun="CLIP">
+               <font>
+                  <Font name="Courier New" size="71.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox fx:id="board" alignment="CENTER" prefHeight="500.0" prefWidth="200.0">
+         <children>
+            <VBox fx:id="col_1" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: &quot;0E79B2&quot;;">
+               <children>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox fx:id="col_2" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: &quot;0E79B2&quot;;">
+               <children>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+               </children>
+            </VBox>
+            <VBox fx:id="col_3" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: &quot;0E79B2&quot;;">
+               <children>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+               </children>
+            </VBox>
+            <VBox fx:id="col_4" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: &quot;0E79B2&quot;;">
+               <children>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+               </children>
+            </VBox>
+            <VBox fx:id="col_5" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: &quot;0E79B2&quot;;">
+               <children>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+               </children>
+            </VBox>
+            <VBox fx:id="col_6" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: &quot;0E79B2&quot;;">
+               <children>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+               </children>
+            </VBox>
+            <VBox fx:id="col_7" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: &quot;0E79B2&quot;;">
+               <children>
+                  <Circle fill="#fbfef9" radius="35.0" smooth="false" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+                  <Circle fill="#fbfef9" radius="35.0" stroke="#191923" strokeType="INSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Circle>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="load" mnemonicParsing="false" style="-fx-background-color: &quot;FBFEF9&quot;;" text="Load" />
+                  <Button fx:id="reset" mnemonicParsing="false" style="-fx-background-color: &quot;FBFEF9&quot;;" text="Reset" />
+                  <Button fx:id="save" mnemonicParsing="false" style="-fx-background-color: &quot;FBFEF9&quot;;" text="Save" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
